@@ -1,5 +1,5 @@
-Getting started
-===============
+Integrate the SDK
+=================
 
 The SuperAwesome Adobe AIR SDK, as of version 3.1.6, is built as an AIR Native Extension in order to work together
 with the SuperAwesome Android or iOS SDK.
@@ -27,8 +27,8 @@ Lastly you'll want to add the .ane file you just downloaded by clicking on the *
 If you follow all these steps the SuperAwesome AIR SDK will be installed as a Native Extension.
 There are however a couple of additional steps to do for either the Android or iOS build.
 
-For Android builds
-^^^^^^^^^^^^^^^^^^
+Setup for Android builds
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 When building your Adobe AIR app as an Android application, you'll often want to change the associated XML file that AIR generates
 alongside your project to add or change different parameters to make it suitable for deploying on Android.
@@ -62,7 +62,7 @@ Android / Manifest Additions part of the xml file.
 As you can see this adds some new permissions the SDK needs (access to Internet) and also adds two activities (SAInterstitialActivity and SAVideoActivity)
 and a new service (SAAsyncTask).
 
-For iOS builds
-^^^^^^^^^^^^^^
+Setup for iOS builds
+^^^^^^^^^^^^^^^^^^^^
 
 This feature is not yet available, but will be soon.
