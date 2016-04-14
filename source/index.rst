@@ -9,7 +9,7 @@ The SuperAwesome Adobe AIR SDK (Software Development Kit) lets you to easily add
 =============== ========
 Info            Contents
 =============== ========
-Version         <sdk_version>
+Version         <sdk_version_air>
 iOS Support     <sdk_iosmin>
 Android Support <sdk_androidmin>
 GitHub          <sdk_source>
