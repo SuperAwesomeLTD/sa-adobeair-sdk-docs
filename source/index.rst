@@ -14,7 +14,7 @@ iOS Support     <sdk_iosmin>
 Android Support <sdk_androidmin>
 GitHub          <sdk_source>
 Support         `<sdk_devsuspport> <mailto:<sdk_devsuspport>>`_
-License         `LICENSE.txt <https://github.com/SuperAwesomeLTD/sa-adobeair-sdk/blob/master/LICENSE>`_
+License         `LICENSE <https://raw.githubusercontent.com/SuperAwesomeLTD/sa-adobeair-sdk/master/LICENSE>`_
 =============== ========
 
 Table of Contents:
