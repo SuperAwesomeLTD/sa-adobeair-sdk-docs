@@ -13,7 +13,7 @@ In the code snippet below we'll start by loading data for the test placement **3
 A good place to do this is in the constructor of a class descending from **Sprite** (such as AdobeAIRDemo), where
 we'll create a **SALoader** object to help us.
 
-SALoader is a SDK class whose sole role is to load, parse, process and validate ad data by comunicating with the native SDK (either iOS or Android).
+SALoader is a SDK class whose sole role is to load, parse, process and validate ad data by communicating with the native SDK (either iOS or Android).
 You'll usually need just one instance of it.
 
 .. code-block:: actionscript
@@ -38,7 +38,7 @@ You'll usually need just one instance of it.
     }
 
 The **loadAd(30471)** function loads data asynchronously, so as not to block the main UI thread.
-When it's done, it calls two important callback methods, **didLoadAd(SAAd loadedAd)** and **didFailToLoadAdForPlacementId(int placementId)**,
+When it's done, it calls two important callback methods, **didLoadAd(SAAd loadedAd)** and **didFailToLoadAd(int placementId)**,
 to notify you of either success or failure.
 In order to use these callbacks:
 
