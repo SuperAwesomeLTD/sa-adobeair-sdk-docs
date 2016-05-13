@@ -44,12 +44,12 @@ Android / Manifest Additions part of the xml file.
             <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
             <uses-permission android:name="android.permission.INTERNET"/>
             <application android:allowBackup="true">
-                <activity android:name="tv.superawesome.sdk.views.SAInterstitialActivity$SAInterstitialActivityInner"
-                          android:label="SAInterstitialActivity"
+                <activity android:name="tv.superawesome.sdk.views.SAInterstitialAd$SAInterstitialAdActivity"
+                          android:label="SAInterstitialAd"
                           android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
                           android:configChanges="keyboardHidden|orientation|screenSize"></activity>
-                <activity android:name="tv.superawesome.sdk.views.SAVideoActivity$SAVideoActivityInner"
-                          android:label="SAVideoActivity"
+                <activity android:name="tv.superawesome.sdk.views.SAFullscreenVideoAd$SAFullscreenVideoAdActivity"
+                          android:label="SAFullscreenVideoAd"
                           android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"></activity>
                 <service android:name="tv.superawesome.lib.sautils.SAAsyncTask$SAAsync" android:exported="false"/>
                 <meta-data android:name="com.google.android.gms.version" android:value="8.4.0"/>
