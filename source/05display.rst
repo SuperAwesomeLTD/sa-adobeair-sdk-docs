@@ -79,7 +79,10 @@ Inline video ads
                 var frame = new Rectangle(250, 450, 640, 100);
                 video = new SAVideoAd(frame);
                 video.setAd(videoAdData);
-                vidoe.play();
+                // toggles a small video "click" button
+                // instead of the whole video surface
+                video.shouldShowSmallClickButton = true;
+                video.play();
             }
         }
     }
@@ -104,6 +107,12 @@ Interstitial ads are represented by objects of type **SAInterstitialAd**.
             if (interstitialAdData != null) {
                 interstitial = new SAInterstitialAd();
                 interstitial.setAd(interstitialAdData);
+
+                // toggles orientation locking
+                interstitial.shouldLockOrientation = true;
+                interstitial.lockOrientation = SALockOrientation.PORTRAIT;
+                interstitial.lockOrientation = SALockOrientation.LANDSCAPE;
+
                 interstitial.play();
             }
         }
@@ -134,10 +143,17 @@ Finally, fullscreen video ads are represented by **SAFullscreenVideoAd**.
                 fvideo.setAd(ad);
                 fvideo.shouldShowCloseButton = true;
                 fvideo.shouldAutomaticallyCloseAtEnd = true;
+
+                // toggles a small video "click" button
+                // instead of the whole video surface
+                fvideo.shouldShowSmallClickButton = true;
+
+                // toggles orientation locking
+                fvideo.shouldLockOrientation = true;
+                fvideo.lockOrientation = SALockOrientation.PORTRAIT;
+                fvideo.lockOrientation = SALockOrientation.LANDSCAPE;
+
                 fvideo.play();
             }
         }
     }
-
-They're similar to interstitial ads, but notice there are two parameters you can set, **shouldShowCloseButton** and
-**shouldAutomaticallyCloseAtEnd**.
