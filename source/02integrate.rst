@@ -11,7 +11,7 @@ proper WebViews, better fullscreen experience, etc.
 * a Flash Builder ActionScript Mobile Project named **AdobeAIRDemo**,
 * containing a single .as file, called **AdobeAIRDemo.as**, that acts as main class.
 
-To begin integrating the SDK download the latest version of the `SAAIR.ane <https://github.com/SuperAwesomeLTD/sa-adobeair-sdk-docs/raw/master/source/res/SAAIR.ane>`_
+To begin integrating the SDK download the latest version of the `SAAIR-<sdk_version_air>.ane <https://github.com/SuperAwesomeLTD/sa-adobeair-sdk-docs/raw/master/source/res/SAAIR-<sdk_version_air>.ane>`_
 file, then right-click on your project in the *Package Explorer* and select *Properties* :
 
 .. image:: img/IMG_02_Add_ANE_1.png
