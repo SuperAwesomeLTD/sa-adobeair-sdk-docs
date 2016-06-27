@@ -11,18 +11,21 @@ proper WebViews, better fullscreen experience, etc.
 * a Flash Builder ActionScript Mobile Project named **AdobeAIRDemo**,
 * containing a single .as file, called **AdobeAIRDemo.as**, that acts as main class.
 
-To begin integrating the SDK download the latest version of the `SAAIR-<sdk_version_air>.ane <https://github.com/SuperAwesomeLTD/sa-adobeair-sdk-docs/raw/master/source/res/SAAIR-<sdk_version_air>.ane>`_
-file, then right-click on your project in the *Package Explorer* and select *Properties* :
+To begin integrating the SDK:
+
+1) Download the latest version of the `SAAIR-<sdk_version_air>.ane <https://github.com/SuperAwesomeLTD/sa-adobeair-sdk-docs/raw/master/source/res/SAAIR-<sdk_version_air>.ane>`_ file
+
+2) Right-click on your project in the *Package Explorer* and select *Properties* :
 
 .. image:: img/IMG_02_Add_ANE_1.png
     :height: 500px
     :align: center
 
-Then go to *ActionScript Build Path* and then to the *Native Extensions* tab.
+3) Then go to *ActionScript Build Path* and then to the *Native Extensions* tab.
 
 .. image:: img/IMG_02_Add_ANE_2.png
 
-Lastly you'll want to add the .ane file you just downloaded by clicking on the *Add ANE* button.
+4) Lastly you'll want to add the .ane file you just downloaded by clicking on the *Add ANE* button.
 
 If you follow all these steps the SuperAwesome AIR SDK will be installed as a Native Extension.
 There are however a couple of additional steps to do for either the Android or iOS build.
