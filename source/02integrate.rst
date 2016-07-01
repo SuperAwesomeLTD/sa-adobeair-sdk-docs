@@ -13,7 +13,7 @@ proper WebViews, better fullscreen experience, etc.
 
 To begin integrating the SDK:
 
-1) Download the latest version of the `SAAIR-<sdk_version_air>.ane <https://github.com/SuperAwesomeLTD/sa-adobeair-sdk-docs/raw/master/source/res/SAAIR-<sdk_version_air>.ane>`_ file
+1) Download the latest version of the `SAAIR-<sdk_version_air>.ane <https://github.com/SuperAwesomeLTD/sa-sdk-build-repo/blob/master/air_build/SAAIR-<sdk_version_air>.ane?raw=true>`_ file
 
 2) Right-click on your project in the *Package Explorer* and select *Properties* :
 
