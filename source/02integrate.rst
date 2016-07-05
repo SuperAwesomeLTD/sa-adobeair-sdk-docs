@@ -54,7 +54,7 @@ Android / Manifest Additions part of the xml file.
                 <activity android:name="tv.superawesome.sdk.views.SAFullscreenVideoAd$SAFullscreenVideoAdActivity"
                           android:label="SAFullscreenVideoAd"
                           android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"></activity>
-                <service android:name="tv.superawesome.lib.sautils.SAAsyncTask$SAAsync" android:exported="false"/>
+                <service android:name="tv.superawesome.lib.sanetwork.asynctask.SAAsyncTask$SAAsync" android:exported="false"/>
                 <meta-data android:name="com.google.android.gms.version" android:value="8.4.0"/>
             </application>
         </manifest>
