@@ -44,7 +44,6 @@ Android / Manifest Additions part of the xml file.
     <manifestAdditions><![CDATA[
         <manifest android:installLocation="auto">
             <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-            <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
             <uses-permission android:name="android.permission.INTERNET"/>
             <application android:allowBackup="true">
                 <activity android:name="tv.superawesome.sdk.views.SAInterstitialAd$SAInterstitialAdActivity"
