@@ -16,7 +16,7 @@ To begin integrating the SDK:
 1.1) Download the latest version of the full SuperAwesome AIR SDK: `SuperAwesomeSDK-<sdk_version_air>.AdobeAIR.full.ane <https://github.com/SuperAwesomeLTD/sa-sdk-build-repo/blob/master/package/SuperAwesomeSDK-<sdk_version_air>.AdobeAIR.full.ane?raw=true>`_ .
 The **full** version will contain everything you need in order to load and display banner, interstitial and video ads as well as the 3rd party `Moat Analytics <https://moat.com/analytics>`_ module.
 
-1.2) Or download the laster version of the base SuperAwesome AIR SDK: `SuperAwesomeSDK-<sdk_version_air>.AdobeAIR.base.ane <https://github.com/SuperAwesomeLTD/sa-sdk-build-repo/blob/master/package/SuperAwesomeSDK-<sdk_version_air>.AdobeAIR.base.ane?raw=true`_ .
+1.2) Or download the laster version of the base SuperAwesome AIR SDK: `SuperAwesomeSDK-<sdk_version_air>.AdobeAIR.base.ane <https://github.com/SuperAwesomeLTD/sa-sdk-build-repo/blob/master/package/SuperAwesomeSDK-<sdk_version_air>.AdobeAIR.base.ane?raw=true>`_ .
 This has the same functionality as the full version, but lacks the Moat Analytics module.
 
 2) Right-click on your project in the *Package Explorer* and select *Properties* :
