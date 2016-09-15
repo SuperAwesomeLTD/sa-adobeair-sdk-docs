@@ -67,7 +67,7 @@ multiple callbacks.
             SAVideoAd.disableParentalGate ();
             SAVideoAd.disableCloseButton ();
 
-            // load
+            // and load it
             SAVideoAd.load (30479);
             SAVideoAd.load (30480);
         }

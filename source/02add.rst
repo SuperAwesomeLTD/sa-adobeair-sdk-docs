@@ -1,15 +1,10 @@
-Integrate the SDK
-=================
+Add the SDK
+===========
 
-The SuperAwesome Adobe AIR SDK, as of version 3.1.6, is built as an AIR Native Extension in order to work together
+The SuperAwesome Adobe AIR SDK is built as an AIR Native Extension in order to work together
 with the SuperAwesome Android or iOS SDK.
 This in turn allows you to harness the full power of native components, such as video based on AVFoundation / VideoView technology,
-proper WebViews, better fullscreen experience, etc.
-
-**Note:** This document assumes:
-
-* a Flash Builder ActionScript Mobile Project named **AdobeAIRDemo**,
-* containing a single .as file, called **AdobeAIRDemo.as**, that acts as main class.
+proper WebViews and a better fullscreen experience.
 
 To begin integrating the SDK:
 
@@ -50,14 +45,21 @@ Android / Manifest Additions part of the xml file.
             <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
             <uses-permission android:name="android.permission.INTERNET"/>
             <application android:allowBackup="true">
-                <activity android:name="tv.superawesome.sdk.views.SAInterstitialAd$SAInterstitialAdActivity"
+                <activity android:name="tv.superawesome.sdk.views.SAInterstitialAd"
                           android:label="SAInterstitialAd"
                           android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
                           android:configChanges="keyboardHidden|orientation|screenSize"></activity>
-                <activity android:name="tv.superawesome.sdk.views.SAFullscreenVideoAd$SAFullscreenVideoAdActivity"
+
+                <activity android:name="tv.superawesome.sdk.views.SAVideoAd"
                           android:label="SAFullscreenVideoAd"
                           android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"></activity>
+
                 <service android:name="tv.superawesome.lib.sanetwork.asynctask.SAAsyncTask$SAAsync" android:exported="false"/>
+
+                <receiver android:name="tv.superawesome.sdk.cpi.SACPI" android:exported="true">
+                    <intent-filter><action android:name="com.android.vending.INSTALL_REFERRER"/></intent-filter>
+                </receiver>
+
                 <meta-data android:name="com.google.android.gms.version" android:value="8.4.0"/>
             </application>
         </manifest>
@@ -65,10 +67,16 @@ Android / Manifest Additions part of the xml file.
     <containsVideo>true</containsVideo>
     </android>
 
-As you can see this adds some new permissions the SDK needs (access to Internet) and also adds two activities (SAInterstitialActivity and SAVideoActivity)
-and a new service (SAAsyncTask).
-
 Setup for iOS builds
 ^^^^^^^^^^^^^^^^^^^^
 
 This feature is not yet available, but will be soon.
+
+Import the SDK
+^^^^^^^^^^^^^^
+
+Once you've integrated the SuperAwesome SDK, you can access all functionality by including following:
+
+.. code-block:: actionscript
+
+    import tv.superawesome.*;
