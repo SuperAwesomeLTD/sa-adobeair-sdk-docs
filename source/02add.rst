@@ -67,16 +67,14 @@ Android / Manifest Additions part of the xml file.
     <containsVideo>true</containsVideo>
     </android>
 
-Setup for iOS builds
-^^^^^^^^^^^^^^^^^^^^
-
-This feature is not yet available, but will be soon.
-
-Import the SDK
-^^^^^^^^^^^^^^
-
 Once you've integrated the SuperAwesome SDK, you can access all functionality by including following:
 
 .. code-block:: actionscript
 
     import tv.superawesome.*;
+
+
+Setup for iOS builds
+^^^^^^^^^^^^^^^^^^^^
+
+This feature is not yet available, but will be soon.
