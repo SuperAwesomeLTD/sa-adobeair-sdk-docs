@@ -23,38 +23,3 @@ or including one of the relevant headers
     import tv.superawesome.interfaces.SAAdInterface;
     import tv.superawesome.interfaces.SAParentalGateInterface;
     import tv.superawesome.interfaces.SAVideoAdInterface;
-
-There are also a few global SDK parameters you can change according to your needs:
-
-=============  ==============  =======
-Parameter      Values          Meaning
-=============  ==============  =======
-Configuration  | Production *  | Should always get ads from production server
-
-Test mode      | Enabled       | Should the SDK serve test ads. For test
-               | Disabled *    | placements (30471, 30476, etc) must be Enabled.
-=============  ==============  =======
- * = denotes default values
-
-You can leave these settings as they are or change them to fit your testing or production needs, as follows:
-
-.. code-block:: actionscript
-
-    // Import all the SuperAwesome SDK library
-    // with all subsequent namespaces
-    import tv.superawesome.*
-
-    //
-    // AdobeAIRDemo is a generic Flash Builder
-    // Mobile Project that will be exported to
-    // either Android or iOS
-    public class AdobeAIRDemo
-            extends Sprite {
-
-        public function AdobeAIRDemo() {
-
-            SuperAwesome.getInstance().setConfigurationProduction();
-            SuperAwesome.getInstance().enableTestMode();
-            // SuperAwesome.getInstance().disableTestMode();
-        }
-    }

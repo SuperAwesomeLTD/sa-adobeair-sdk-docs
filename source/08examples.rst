@@ -4,62 +4,39 @@ Examples
 Simple example
 ^^^^^^^^^^^^^^
 
-The first example shows how you can add a video ad in your app with just a
+The first example shows how you can add a banner ad in your app with just a
 few lines of code.
 
 .. code-block:: actionscript
 
-    package {
+    public class Demo extends Sprite {
 
-        import flash.display.Sprite;
-        import flash.display.StageAlign;
-        import flash.display.StageScaleMode;
-        import flash.geom.Rectangle;
-        import tv.superawesome.*;
+        var banner: SABannerAd = null;
 
-        public class AdobeAIRDemo
-               extends Sprite
-               implements SALoaderInterface {
+        // initialization
+        public function Demo () {
+            super ();
 
-            // declare the three main variables
-            // needed by SuperAwesome to load & display
-            // an Ad
-            private var loader: SALoader = null;
-            private var video: SAVideoAd = null;
-            private var adData: SAAd = null;
+            // create a new banner
+            banner = new SABannerAd ();
 
-            public function AdobeAIRDemo() {
+            // setup the banner
+            banner.disableParentalGate();
 
-                // set stage
-                stage.align = StageAlign.TOP_LEFT;
-                stage.scaleMode = StageScaleMode.NO_SCALE;
+            // add a callback
+            banner.setCallback (function (placementId: int, evt: int) {
 
-                // config SuperAwesome
-                SuperAwesome.getInstance().setConfigurationProduction();
-                SuperAwesome.getInstance().enableTestMode();
+                // when the ad loads, play it directly
+                if (evt == SAEvent.adLoaded) {
+                    banner.play ();
+                }
+            });
 
-                // load the ad
-                loader = new SALoader();
-                loader.delegate = this;
-                loader.loadAd(30479);
-            }
-
-            // implementation of the SALoaderInterface
-            public function didLoadAd(ad: SAAd): void {
-                // handle success
-                adData = ad;
-
-                var frame = new Rectangle(0, 50, 640, 400);
-                video = new SAVideoAd(frame);
-                video.setAd(adData);
-                video.play();
-            }
-
-            public function didFailToLoadAd(placementId: int): void {
-                // failure
-            }
+            // start the loading process
+            banner.load (30471);
         }
     }
+
 
 Complex example
 ^^^^^^^^^^^^^^^
@@ -69,122 +46,60 @@ multiple callbacks.
 
 .. code-block:: actionscript
 
-    package {
+    public class Demo extends Sprite {
 
-        import flash.display.Sprite;
-        import flash.display.StageAlign;
-        import flash.display.StageScaleMode;
-        import flash.geom.Rectangle;
-        import tv.superawesome.*;
+        var banner: SABannerAd = null;
 
-        public class AdobeAIRDemo
-               extends Sprite
-               implements SALoaderInterface,
-                          SAAdInterface,
-                          SAParentalGateInterface,
-                          SAVideoAdInterface {
+        // initialization
+        public function Demo () {
+            super ();
 
-            // loader
-            private var loader: SALoader = null;
+            // create a new banner
+            banner = new SABanner ();
 
-            // ad data
-            private var bannerAdData: SAAd = null;
-            private var interstitialAdData: SAAd = null;
-            private var videoAdData: SAAd = null;
+            // setup the banner
+            banner.enableParentalGate ();
 
-            // display objects
-            private var banner: SABannerAd = null;
-            private var interstitial: SAInterstitialAd = null;
-            private var fvideo: SAFullscreenVideoAd = null;
+            // and load it
+            banner.load (30471);
 
-            public function AdobeAIRDemo() {
-                // set stage
-                stage.align = StageAlign.TOP_LEFT;
-                stage.scaleMode = StageScaleMode.NO_SCALE;
+            // setup the video
+            SAVideoAd.disableParentalGate ();
+            SAVideoAd.disableCloseButton ();
 
-                // config SuperAwesome
-                SuperAwesome.getInstance().setConfigurationProduction();
-                SuperAwesome.getInstance().enableTestMode();
+            // load
+            SAVideoAd.load (30479);
+            SAVideoAd.load (30480);
+        }
 
-                // load the ad
-                loader = new SALoader();
-                loader.delegate = this;
-                loader.loadAd(30471);
-                loader.loadAd(30473);
-                loader.loadAd(30479);
+        public void playBanner () {
+
+            if (banner.hasAdAvailable ()) {
+                banner.play ();
             }
+        }
 
-            //
-            // three function to display ads -
-            // these should be connected to buttons
-            public function showBanner(): void {
-                var frame = new Rectangle(0, 0, 320, 50);
+        public void playVideo1 () {
 
-                // it's good practice to always check
-                // that the ad data is not null
-                if (bannerAdData) {
-                    banner = new SABannerAd(frame);
-                    banner.setAd(bannerAdData);
-                    banner.adDelegate = this;
-                    banner.isParentalGateEnabled = true;
-                    banner.parentalGateDelegate = this;
-                    banner.play();
-                }
+            if (SAVideoAd.hasAdAvailable (30479)) {
+
+                // do some last minute setup
+                SAVideoAd.setOrientationLandscape ();
+
+                // and play
+                SAVideoAd.play (30479);
             }
+        }
 
-            public function showInterstitial(): void {
-                if (interstitialAdData) {
-                    interstitial = new SAInterstitialAd();
-                    interstitial.setAd(interstitialAdData);
-                    interstitial.play();
-                }
-            }
+        public void playVideo2 () {
 
-            public function showVideo(): void {
-                if (videoAdData) {
-                    fvideo = new SAFullscreenVideoAd();
-                    fvideo.setAd(ad);
-                    fvideo.videoAdDelegate = this;
-                    fvideo.shouldShowCloseButton = true;
-                    fvideo.shouldAutomaticallyCloseAtEnd = true;
-                    fvideo.isParentalGateEnabled = false;
-                    fvideo.play();
-                }
-            }
+            if (SAVideoAd.hasAdAvailable (30480)) {
 
-            //
-            // SAAdInterface implementation
-            public function adWasShown(placementId: int): void {
-                trace("Ad " + placementId + " Was shown");
-            }
+                // do some last minute setup
+                SAVideoAd.setOrientationAny ();
 
-            public function adFailedToShow(placementId: int): void {}
-            public function adWasClosed(placementId: int): void {}
-            public function adWasClicked(placementId: int): void {}
-            public function adHasIncorrectPlacement(placementId: int): void {}
-
-            //
-            // SAParentalGateInterface implementation
-            public function parentalGateWasCanceled(placementId: int): void {}
-            public function parentalGateWasFailed(placementId: int): void {}
-            public function parentalGateWasSucceded(placementId: int): void {}
-
-            //
-            // SAVideoAdInterface implementation
-            public function adStarted(placementId: int): void {}
-            public function videoStarted(placementId: int): void {}
-            public function videoReachedFirstQuartile(placementId: int): void {}
-
-            public function videoReachedMidpoint(placementId: int): void {
-                trace("Reached midpoint with " + placementId);
-            }
-
-            public function videoReachedThirdQuartile(placementId: int): void {}
-            public function videoEnded(placementId: int): void {}
-            public function adEnded(placementId: int): void {}
-
-            public function allAdsEnded(placementId: int): void {
-                trace("All video ads ended!");
+                // and play
+                SAVideoAd.play (30480);
             }
         }
     }
