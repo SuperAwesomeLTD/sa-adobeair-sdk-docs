@@ -30,7 +30,7 @@ If you follow all these steps the SuperAwesome AIR SDK will be installed as a Na
 There are however a couple of additional steps to do for either the Android or iOS build.
 
 Setup for Android builds
-^^^^^^^^^^^^^^^^^^^^^^^^
+------------------------
 
 When building your Adobe AIR app as an Android application, you'll often want to change the associated XML file that AIR generates
 alongside your project to add or change different parameters to make it suitable for deploying on Android.
@@ -75,6 +75,6 @@ Once you've integrated the SuperAwesome SDK, you can access all functionality by
 
 
 Setup for iOS builds
-^^^^^^^^^^^^^^^^^^^^
+--------------------
 
 This feature is not yet available, but will be soon.

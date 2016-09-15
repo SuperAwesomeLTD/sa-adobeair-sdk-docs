@@ -2,7 +2,7 @@ Examples
 ========
 
 Simple example
-^^^^^^^^^^^^^^
+--------------
 
 The first example shows how you can add a banner ad in your app with just a
 few lines of code.
@@ -39,7 +39,7 @@ few lines of code.
 
 
 Complex example
-^^^^^^^^^^^^^^^
+---------------
 
 This example shows how you can add different types of ads and make them respond to
 multiple callbacks.
