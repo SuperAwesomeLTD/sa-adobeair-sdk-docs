@@ -45,6 +45,7 @@ Android / Manifest Additions part of the xml file.
             <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
             <uses-permission android:name="android.permission.INTERNET"/>
             <application android:allowBackup="true">
+            
                 <activity android:name="tv.superawesome.sdk.views.SAInterstitialAd"
                           android:label="SAInterstitialAd"
                           android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
@@ -60,7 +61,6 @@ Android / Manifest Additions part of the xml file.
                     <intent-filter><action android:name="com.android.vending.INSTALL_REFERRER"/></intent-filter>
                 </receiver>
 
-                <meta-data android:name="com.google.android.gms.version" android:value="8.4.0"/>
             </application>
         </manifest>
     ]]></manifestAdditions>
