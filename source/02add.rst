@@ -45,7 +45,7 @@ Android / Manifest Additions part of the xml file.
             <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
             <uses-permission android:name="android.permission.INTERNET"/>
             <application android:allowBackup="true">
-            
+
                 <activity android:name="tv.superawesome.sdk.views.SAInterstitialAd"
                           android:label="SAInterstitialAd"
                           android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
@@ -54,6 +54,11 @@ Android / Manifest Additions part of the xml file.
                 <activity android:name="tv.superawesome.sdk.views.SAVideoAd"
                           android:label="SAFullscreenVideoAd"
                           android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"></activity>
+
+								<activity android:name="tv.superawesome.sdk.views.SAGameWall"
+													android:label="SAGameWall"
+													android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+													android:configChanges="keyboardHidden|orientation|screenSize"></activity>
 
                 <service android:name="tv.superawesome.lib.sanetwork.asynctask.SAAsyncTask$SAAsync" android:exported="false"/>
 

@@ -27,6 +27,7 @@ Table of Contents:
    Banner ads <03banner>
    Interstitial ads <04interstitial>
    Video ads <05video>
-   Ad callbacks <06callbacks>
-   Handle CPI <07cpi>
-   Examples <08examples>
+	 Game Wall <06gamewall>
+   Ad callbacks <07callbacks>
+   Handle CPI <08cpi>
+   Examples <09examples>
