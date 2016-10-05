@@ -9,11 +9,10 @@ The SuperAwesome Adobe AIR SDK (Software Development Kit) lets you to easily add
 =============== ========
 Info            Contents
 =============== ========
-Version         <sdk_version_air>
-iOS Support     <sdk_iosmin>
-Android Support <sdk_androidmin>
+Version         <sdk_version>
 GitHub          <sdk_source>
-Support         `<sdk_devsuspport> <mailto:<sdk_devsuspport>>`_
+Support 		    <sdk_min>
+Contact         `<sdk_devsuspport> <mailto:<sdk_devsuspport>>`_
 License         `LICENSE <https://raw.githubusercontent.com/SuperAwesomeLTD/sa-adobeair-sdk/master/LICENSE>`_
 =============== ========
 
