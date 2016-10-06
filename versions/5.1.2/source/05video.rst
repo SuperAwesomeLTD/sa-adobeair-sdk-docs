@@ -23,6 +23,9 @@ The following code block sets up a video ad and loads it:
             // enable or disable a close button
             SAVideoAd.disableCloseButton ();
 
+            // enable or disable the android back button
+            SAVideoAd.enableBackButton ();
+
             // enable or disable auto-closing at the end
             SAVideoAd.disableCloseAtEnd ();
 
