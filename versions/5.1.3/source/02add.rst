@@ -93,11 +93,13 @@ or in:
 
     /System/Library/Frameworks
 
-or in
+or in:
 
 .. code-block:: shell
 
     /usr/lib
+
+Lastly, the native component of the SDK will only work for **iOS 8.0+** builds.
 
 Finally
 -------
