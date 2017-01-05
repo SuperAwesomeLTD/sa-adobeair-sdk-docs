@@ -52,11 +52,11 @@ Android / Manifest Additions part of the xml file.
                           android:configChanges="keyboardHidden|orientation|screenSize"></activity>
 
                 <activity android:name="tv.superawesome.sdk.views.SAVideoAd"
-                          android:label="SAFullscreenVideoAd"
+                          android:label="SAVideoAd"
                           android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"></activity>
 
-								<activity android:name="tv.superawesome.sdk.views.SAGameWall"
-													android:label="SAGameWall"
+								<activity android:name="tv.superawesome.sdk.views.SAAppWall"
+													android:label="SAAppWall"
 													android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
 													android:configChanges="keyboardHidden|orientation|screenSize"></activity>
 
@@ -75,31 +75,7 @@ Android / Manifest Additions part of the xml file.
 Setup for iOS builds
 --------------------
 
-When building your Adobe AIR app as an iOS application, you'll have to add another framework in addition to the .ane file.
-
-The framework actually contains the SDK native code for iOS and can be downloaded here: `SuperAwesomeSDK.framework.zip <https://github.com/SuperAwesomeLTD/sa-sdk-build-repo/blob/master/ios_build/SuperAwesomeSDK.framework.zip?raw=true>`_ .
-
-You'll have to unzip this file and add the resulting .framework file to one of these three folders in order for the native extension to compile for iOS:
-
-For example, in:
-
-.. code-block:: shell
-
-    /Applications/Adobe Flash Builder 4.7/eclipse/plugins/com.adobe.flash.compiler/AIRSDK/lib/aot/stub/
-
-or in:
-
-.. code-block:: shell
-
-    /System/Library/Frameworks
-
-or in:
-
-.. code-block:: shell
-
-    /usr/lib
-
-Lastly, the native component of the SDK will only work for **iOS 8.0+** builds.
+There are no additional steps to take when it comes to the iOS build, but you must know that the native component of the SDK will only work for **iOS 8.0+** builds.
 
 Finally
 -------
