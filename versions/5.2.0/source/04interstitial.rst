@@ -1,0 +1,43 @@
+Interstitial Ads
+================
+
+The following code block sets up an interstitial ad and loads it:
+
+.. code-block:: actionscript
+
+    public class Demo extends Sprite {
+
+        // initialization
+        public function Demo () {
+            super ();
+
+            // to display test ads
+            SAInterstitialAd.enableTestMode ();
+
+            // lock orientation to portrait or landscape
+            SAInterstitialAd.setOrientationPortrait ();
+
+            // enable or disable the android back button
+            SAInterstitialAd.enableBackButton ();
+
+            // ask users to add two numbers when clicking on an ad
+            SAInterstitialAd.enableParentalGate ();
+
+            // start loading ad data for a placement
+            SAInterstitialAd.load (30473);
+        }
+    }
+
+Once you've loaded an ad, you can also display it:
+
+.. code-block:: actionscript
+
+    public void playInterstitial () {
+
+        // check if ad is loaded
+        if (SAInterstitialAd.hasAdAvailable (30473)) {
+
+            // display the ad
+            SAInterstitialAd.play (30473);
+        }
+    }
