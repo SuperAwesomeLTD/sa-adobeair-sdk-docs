@@ -4558,7 +4558,7 @@ div[class^='highlight'] pre {
     padding: 0.809em;
     margin-bottom: 0.809em;
     z-index: 200;
-    background-color: #c32e21;
+    background-color: #256EFF;
     text-align: center;
     padding: 0.809em;
     display: block;
@@ -4675,7 +4675,7 @@ div[class^='highlight'] pre {
     overflow-x: hidden;
     overflow-y: hidden;
     min-height: 100%;
-    background: #343131;
+    background: #434343;
     z-index: 200
 }
 .wy-side-scroll {
@@ -4853,7 +4853,7 @@ footer span.commit .rst-content tt,
     width: 300px;
     color: #fcfcfc;
     background: #1f1d1d;
-    border-top: solid 10px #343131;
+    border-top: solid 10px #434343;
     font-family: "Lato", "proxima-nova", "Helvetica Neue", Arial, sans-serif;
     z-index: 400
 }
