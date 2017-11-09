@@ -54,18 +54,12 @@ Using this SDK is no exception, and you'll have to add the following lines to th
                           android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
                           android:configChanges="keyboardHidden|orientation|screenSize"></activity>
 
-                <activity android:name="tv.superawesome.sdk.publisher.SAAppWall"
-                          android:label="SAAppWall"
-                          android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
-                          android:screenOrientation="portrait"
-                          android:configChanges="keyboardHidden|orientation|screenSize"></activity>
-
                 <activity android:name="tv.superawesome.lib.sabumperpage.SABumperPage"
                           android:label="SABumperPage"
                           android:configChanges="keyboardHidden|orientation|screenSize"
                           android:theme="@android:style/Theme.Holo.Dialog.NoActionBar"
                           android:excludeFromRecents="true"/>
-													
+
                 <service  android:name="tv.superawesome.lib.sanetwork.asynctask.SAAsyncTask$SAAsync"
                           android:exported="false"
                           android:permission="tv.superawesome.sdk.SuperAwesomeSDK"/>
