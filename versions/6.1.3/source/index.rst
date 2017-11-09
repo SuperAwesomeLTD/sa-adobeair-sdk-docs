@@ -24,7 +24,6 @@ Table of Contents
    Banner ads <03banner>
    Interstitial ads <04interstitial>
    Video ads <05video>
-	 App Wall <06appwall>
    Parental gate <07parentalgate>
 	 Bumper page <08bumper>
 	 Ad callbacks <09callbacks>
