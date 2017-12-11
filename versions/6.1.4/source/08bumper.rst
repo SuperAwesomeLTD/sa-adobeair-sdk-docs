@@ -23,7 +23,9 @@ You can customise the general appearance of the Bumper Page by calling:
   // customize the name displayed on the bumper page
   SABumperPage.overrideName("__CUSTOM_APP_NAME__");
 
-By default the Bumper page will try to use the application name and the AwesomeAds logo.
+By default the Bumper page will try to use the application name and the AwesomeAds logo and will look like following:
+
+.. image:: img/IMG_06_BumperPage.png
 
 Forcing the bumper
 ------------------
@@ -44,7 +46,4 @@ Optionally, Publishers can choose for the bumper to always display when an ad is
   // enable Bumper page on all video ads
   SAVideoAd.enableBumperPage();
 
-By default the bumper looks like the following:
-
-.. image:: img/IMG_06_BumperPage.png
 
